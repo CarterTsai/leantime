@@ -94,7 +94,8 @@ namespace leantime\domain\controllers {
 
                 if (isset($_GET['module']) && isset($_GET['label'])) {
 
-                    $sanatizedString = preg_replace("/[^a-zA-Z0-9 ]+/", '', $params['newLabel']);
+                    //$sanatizedString = preg_replace("/[^a-zA-Z0-9 ]+/", '', $params['newLabel']);
+                    $sanatizedString = $params['newLabel'];
 
                     if ($_GET['module'] == "ticketlabels") {
                         $stateLabels = $this->ticketsRepo->getStateLabels();
